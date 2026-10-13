@@ -1,0 +1,35 @@
+Farm Tracker — Play Store listing draft (English; add Telugu lines before submit)
+===============================================================================
+
+APP NAME (30 chars max):
+Farm Tracker: Pesticide Log
+
+SHORT DESCRIPTION (80 chars max):
+Simple offline pesticide & stock tracker for farmers. English + Telugu.
+
+FULL DESCRIPTION (4000 chars max):
+Farm Tracker is a simple, senior-friendly pesticide / insecticide tracker made
+for farmers. Big buttons, minimal typing, English + Telugu.
+
+- Track your pesticides, insecticides, herbicides and fungicides
+- Scan barcodes/QR codes instead of typing
+- Log every spray: crop, field, quantity — stock updates automatically
+- Low-stock, expiring-soon and expired alerts
+- Reports with CSV + PDF export
+- Government schemes & farm loans info (English + Telugu)
+- 100% OFFLINE — works with no internet; your data stays on your phone
+
+No dosage advice: the app stores the official label text from the bottle and
+your own records only.
+
+CATEGORY: Productivity (alt: Tools)
+CONTENT RATING answers: no user interaction, no location, no data shared.
+DATA SAFETY: No data collected. No data shared. (Camera used on-device only.)
+
+GRAPHICS NEEDED (upload in Play Console):
+- App icon 512x512 (replace placeholder assets/icon.png first)
+- Feature graphic 1024x500
+- At least 2 phone screenshots (take on a real device: Home + Add Product)
+
+PRIVACY POLICY URL:
+https://github.com/bharathkumark843-pixel/Farm-Traker/blob/main/PRIVACY.md
