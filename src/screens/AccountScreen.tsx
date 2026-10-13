@@ -11,7 +11,8 @@ import { theme } from '../theme';
 
 // Offline profile + settings.
 export function AccountScreen() {
-  const { products, logs } = useApp();
+  const { products, logs, cloudOn, syncing, lastSync, syncNow } = useApp();
+  const [syncMsg, setSyncMsg] = useState('');
   const [phone, setPhone] = useState('');
   const [phoneDigits, setPhoneDigits] = useState('');
   const [name, setName] = useState('');
@@ -67,10 +68,30 @@ export function AccountScreen() {
     ]);
   }
 
+  async function onSync() {
+    setSyncMsg('');
+    const r = await syncNow();
+    if (r.ok) {
+      setSyncMsg(`Synced ${r.pushed} up, ${r.pulled} down. / పైకి ${r.pushed}, కిందికి ${r.pulled}.`);
+    } else if (r.reason === 'not-configured') {
+      setSyncMsg('Cloud backup is off — Supabase keys are not set on this phone. / క్లౌడ్ ఆఫ్‌లో ఉంది.');
+    } else if (r.reason === 'offline') {
+      setSyncMsg('No internet — data is safe on this phone and will sync later. / ఇంటర్నెట్ లేదు — తర్వాత సమకాలీకరిస్తుంది.');
+    } else {
+      setSyncMsg(`Sync failed${r.error ? `: ${r.error}` : ''} — try again. / మళ్లీ ప్రయత్నించండి.`);
+    }
+  }
+
   const nameOf = (id: string) => products.find((p) => p.id === id)?.name ?? id;
   const pick = (enText: string, teText: string) =>
     lang === 'te' ? { primary: teText || enText, secondary: enText } : { primary: enText, secondary: teText };
   const heading = pick('Account', 'ఖాతా');
+
+  const syncStatus = !cloudOn
+    ? pick('Cloud backup is OFF (works fully offline)', 'క్లౌడ్ బ్యాకప్ ఆఫ్ (ఆఫ్‌లైన్‌లో పనిచేస్తుంది)')
+    : lastSync
+      ? pick(`Cloud backup ON • Last synced ${lastSync.slice(0, 16).replace('T', ' ')}`, `క్లౌడ్ బ్యాకప్ ఆన్ • చివరిసారి ${lastSync.slice(0, 16).replace('T', ' ')}`)
+      : pick('Cloud backup ON • Not synced yet', 'క్లౌడ్ బ్యాకప్ ఆన్ • ఇంకా సమకాలీకరించలేదు');
 
   return (
     <ScrollView style={styles.c} contentContainerStyle={{ padding: 16 }} keyboardShouldPersistTaps="handled">
@@ -92,6 +113,11 @@ export function AccountScreen() {
       <BigButton title={lang === 'te' ? '● తెలుగు' : 'తెలుగు'} onPress={() => setLang('te')} variant={lang === 'te' ? 'primary' : 'secondary'} />
       {formError ? <Text style={styles.error}>{formError}</Text> : null}
       <BigButton title="💾 SAVE (offline) / భద్రపరచు" onPress={save} />
+      <Text style={styles.label}>{pick('Cloud backup', 'క్లౌడ్ బ్యాకప్').primary}</Text>
+      <Text style={styles.labelSub}>{syncStatus.primary}</Text>
+      <Text style={styles.labelSub}>{syncStatus.secondary}</Text>
+      {syncMsg ? <Text style={styles.syncMsg}>{syncMsg}</Text> : null}
+      <BigButton title={syncing ? '☁ SYNCING… / సమకాలీకరిస్తోంది…' : '☁ SYNC NOW / సమకాలీకరించు'} onPress={onSync} variant="secondary" />
       <BigButton title={pick('🚪 LOG OUT', '🚪 లాగ్ అవుట్').primary} onPress={logout} variant="danger-outline" />
       <Text style={styles.hint}>CSV rows available: {logsToCSV(logs, nameOf).split('\n').length - 1}. Full export stays in Reports.</Text>
     </ScrollView>
@@ -106,4 +132,5 @@ const styles = StyleSheet.create({
   labelSub: { fontSize: 16, color: theme.colors.muted, marginBottom: 6 },
   error: { fontSize: 18, fontWeight: 'bold', color: theme.colors.danger, backgroundColor: theme.colors.dangerSoft, borderWidth: 1, borderColor: theme.colors.danger, padding: 12, borderRadius: 12, marginTop: 8, marginBottom: 8, overflow: 'hidden' },
   hint: { fontSize: 16, color: theme.colors.muted, marginTop: 8, textAlign: 'center' },
+  syncMsg: { fontSize: 18, color: theme.colors.text, backgroundColor: theme.colors.card, borderWidth: 1, borderColor: theme.colors.cardBorder, padding: 12, borderRadius: 12, marginTop: 8, marginBottom: 8, overflow: 'hidden' },
 });

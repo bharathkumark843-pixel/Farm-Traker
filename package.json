@@ -17,6 +17,7 @@
     "@react-navigation/bottom-tabs": "^6.6.1",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/native-stack": "^6.9.26",
+    "@supabase/supabase-js": "^2.117.3",
     "@zxing/browser": "^0.2.1",
     "expo": "~52.0.0",
     "expo-asset": "~11.0.5",

@@ -301,18 +301,27 @@ export async function saveProduct(p: Product): Promise<void> {
 
 export async function deleteProduct(id: string): Promise<void> {
   if (IS_WEB) {
+    const doomedLogs = webLogs().filter((l) => l.productId === id).map((l) => l.id);
     webSaveProducts(webProducts().filter((p) => p.id !== id));
     webSaveLogs(webLogs().filter((l) => l.productId !== id));
+    await recordTombstones('products', [id]);
+    await recordTombstones('logs', doomedLogs);
     return;
   }
   const d = getDb();
   if (!d) {
+    const doomedLogs = mem.logs.filter((l) => l.productId === id).map((l) => l.id);
     mem.products = mem.products.filter((p) => p.id !== id);
     mem.logs = mem.logs.filter((l) => l.productId !== id);
+    await recordTombstones('products', [id]);
+    await recordTombstones('logs', doomedLogs);
     return;
   }
+  const doomed = await d.getAllAsync<{ id: string }>('SELECT id FROM usage_logs WHERE productId = ?', id);
   await d.runAsync('DELETE FROM products WHERE id = ?', id);
   await d.runAsync('DELETE FROM usage_logs WHERE productId = ?', id);
+  await recordTombstones('products', [id]);
+  await recordTombstones('logs', doomed.map((r) => r.id));
 }
 
 export async function getLogs(productId?: string): Promise<UsageLog[]> {
@@ -370,14 +379,83 @@ export async function addUsageLog(log: UsageLog): Promise<void> {
 export async function deleteUsageLog(id: string): Promise<void> {
   if (IS_WEB) {
     webSaveLogs(webLogs().filter((l) => l.id !== id));
+    await recordTombstones('logs', [id]);
     return;
   }
   const d = getDb();
   if (!d) {
     mem.logs = mem.logs.filter((l) => l.id !== id);
+    await recordTombstones('logs', [id]);
     return;
   }
   await d.runAsync('DELETE FROM usage_logs WHERE id = ?', id);
+  await recordTombstones('logs', [id]);
+}
+
+// ---------- Cloud backup: delete tombstones + raw upsert ----------
+// When a row is deleted locally we remember its id so the next cloud sync can
+// delete the matching cloud copy too (local hard-deletes leave no trace).
+// Profiles/schemes are never tombstoned (reference data / single-row).
+export type TombKind = 'products' | 'logs';
+
+function tombKey(kind: TombKind): string {
+  return kind === 'products' ? 'cloud_tomb_products' : 'cloud_tomb_logs';
+}
+
+async function recordTombstone(kind: TombKind, id: string): Promise<void> {
+  try {
+    const ids = await getTombstones(kind);
+    if (!ids.includes(id)) {
+      ids.push(id);
+      await setPref(tombKey(kind), JSON.stringify(ids.slice(-2000)));
+    }
+  } catch {
+    /* tombstones are best-effort; local delete already succeeded */
+  }
+}
+
+export async function recordTombstones(kind: TombKind, ids: string[]): Promise<void> {
+  for (const id of ids) await recordTombstone(kind, id);
+}
+
+export async function getTombstones(kind: TombKind): Promise<string[]> {
+  try {
+    const raw = await getPref(tombKey(kind), '[]');
+    const arr = JSON.parse(raw);
+    return Array.isArray(arr) ? arr.filter((x) => typeof x === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function clearTombstones(kind: TombKind): Promise<void> {
+  try {
+    await setPref(tombKey(kind), '[]');
+  } catch {
+    /* best-effort */
+  }
+}
+
+// Insert-or-replace a usage log WITHOUT touching stock. Used only by cloud
+// pull: addUsageLog() would subtract stock a second time for already-counted
+// cloud rows.
+export async function upsertUsageLogRaw(log: UsageLog): Promise<void> {
+  if (IS_WEB) {
+    const logs = webLogs().filter((l) => l.id !== log.id);
+    logs.unshift(log);
+    webSaveLogs(logs);
+    return;
+  }
+  const d = getDb();
+  if (!d) {
+    mem.logs = mem.logs.filter((l) => l.id !== log.id);
+    mem.logs.unshift(log);
+    return;
+  }
+  await d.runAsync(
+    'INSERT OR REPLACE INTO usage_logs (id,productId,date,quantityUsed,crop,field,purposePest,note,createdAt) VALUES (?,?,?,?,?,?,?,?,?)',
+    log.id, log.productId, log.date, log.quantityUsed, log.crop, log.field, log.purposePest, log.note, log.createdAt
+  );
 }
 
 // ---------- P0 v2: filtered helpers ----------

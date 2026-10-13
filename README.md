@@ -77,6 +77,20 @@ npm run export:web  # web build into dist/
 Schemes/Loans ship with bundled data and refresh from a hosted JSON array when
 `DEFAULT_SCHEMES_URL` / `DEFAULT_LOANS_URL` are set in `src/utils/schemesSource.ts`.
 
+## 3b. Cloud backup (Supabase, optional)
+
+Local SQLite/localStorage stays the source of truth — the app works fully offline
+with no keys. When `EXPO_PUBLIC_SUPABASE_URL` + `EXPO_PUBLIC_SUPABASE_ANON_KEY`
+are set (see `.env.example`), the app mirrors products, usage logs, and the
+profile to Supabase: background sync on launch + a big SYNC NOW button in
+Account (bilingual). Last-write-wins by timestamp; deletes sync via tombstones.
+One farmer = one phone in v1 (rows namespaced by verified phone number).
+
+Setup: create a free project at supabase.com → run `supabase/schema.sql` once in
+the SQL Editor → copy `.env.example` to `.env` with your URL + anon key
+(EAS builds: `eas env:create` instead) → rebuild. RLS policies ship permissive
+for the pilot — tighten before wide release (see comment in `schema.sql`).
+
 ## 4. Notes / next steps
 
 - No dosage, mixing, or safety recommendations — only label text + farmer's own records.
