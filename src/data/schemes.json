@@ -1,0 +1,112 @@
+[
+  {
+    "id": "pm-kisan",
+    "title_en": "PM-KISAN Income Support",
+    "title_te": "పీఎం కిసాన్ ఆదాయ మద్దతు",
+    "desc_en": "Rs 6,000/year in 3 instalments of Rs 2,000 by DBT to land-holding farmer families. 23rd instalment released 20-Jun-2026. Needs Aadhaar-seeded bank + e-KYC + land seeding. Check status on pmkisan.gov.in.",
+    "desc_te": "భూమి ఉన్న రైతు కుటుంబాలకు ఏడాదికి రూ.6,000 — 3 విడతల్లో DBT. 23వ విడత 20-జూన్-2026న విడుదల. ఆధార్-బ్యాంకు అనుసంధానం + e-KYC తప్పనిసరి. pmkisan.gov.in లో స్టేటస్ చూడండి.",
+    "link": "https://pmkisan.gov.in",
+    "phone": "155261",
+    "updatedOn": "2026-06-20"
+  },
+  {
+    "id": "pmfby",
+    "title_en": "PM Crop Insurance (PMFBY)",
+    "title_te": "పంటల బీమా (PMFBY)",
+    "desc_en": "Insure notified Kharif/Rabi crops: farmer pays max 2% Kharif, 1.5% Rabi, 5% commercial/horticulture. Voluntary for all including tenants/sharecroppers. Enrol at bank/PACS/CSC or pmfby.gov.in before season cut-off (Kharif ~31 July).",
+    "desc_te": "నోటిఫై చేసిన పంటలకు బీమా: రైతు వాటా ఖరీఫ్ 2%, రబీ 1.5%, వాణిజ్య పంటలు 5%. కౌలు/పాలు రైతులతో సహా అందరికీ స్వచ్ఛందం. గడువుకు ముందు బ్యాంకు/CSC/pmfb.gov.in లో నమోదు (ఖరీఫ్ ~జూలై 31).",
+    "link": "https://pmfby.gov.in",
+    "phone": "14447",
+    "updatedOn": "2026-07-31"
+  },
+  {
+    "id": "soil-health",
+    "title_en": "Soil Health Card",
+    "title_te": "భూసార పరీక్ష కార్డు",
+    "desc_en": "Free soil testing under RKVY Soil Health & Fertility. 12 parameters + fertilizer advice every 2-3 years. 25 crore+ cards, 8,272 labs. Contact agriculture officer / soil lab or soilhealth.dac.gov.in.",
+    "desc_te": "RKVY కింద ఉచిత భూసార పరీక్ష. 12 అంశాలు + ఎరువుల సలహా, 2-3 ఏళ్లకోసారి. 25 కోట్ల+ కార్డులు, 8,272 ల్యాబ్‌లు. వ్యవసాయ అధికారి/ల్యాబ్‌ను కలవండి లేదా soilhealth.dac.gov.in చూడండి.",
+    "link": "https://soilhealth.dac.gov.in",
+    "phone": "",
+    "updatedOn": "2026-02-01"
+  },
+  {
+    "id": "micro-irrigation",
+    "title_en": "Micro-Irrigation Subsidy (Per Drop More Crop)",
+    "title_te": "బిందు/తుంపర సేద్యం రాయితీ",
+    "desc_en": "55% subsidy for small/marginal farmers, 45% for others on drip/sprinkler (max 5 ha, 7-yr reuse). Under RKVY since 2022-23. Apply via horticulture / APMIP office or pmksy.gov.in.",
+    "desc_te": "డ్రిప్/స్ప్రింక్లర్‌పై చిన్న/సన్నకారు రైతులకు 55%, ఇతరులకు 45% రాయితీ (గరిష్ఠం 5 హెక్టార్లు). 2022-23 నుంచి RKVY కింద. ఉద్యాన శాఖ/APMIP ద్వారా లేదా pmksy.gov.in లో దరఖాస్తు.",
+    "link": "https://pmksy.gov.in",
+    "phone": "",
+    "updatedOn": "2026-02-17"
+  },
+  {
+    "id": "farm-mechanization",
+    "title_en": "Farm Machinery Subsidy (SMAM)",
+    "title_te": "వ్యవసాయ యంత్రాల రాయితీ",
+    "desc_en": "40% subsidy general, 50% for SC/ST/small/marginal/NE on machines; Custom Hiring Centres 40% to Rs 250L, Machinery Banks 80% to Rs 30L. Apply on agrimachinery.nic.in (DBT lottery).",
+    "desc_te": "యంత్రాలపై సాధారణంగా 40%, SC/ST/చిన్న రైతులకు 50% రాయితీ; కస్టమ్ హైరింగ్ కేంద్రాలకు 40% (రూ.250 లక్షల వరకు). agrimachinery.nic.in లో DBT దరఖాస్తు.",
+    "link": "https://agrimachinery.nic.in",
+    "phone": "",
+    "updatedOn": "2026-07-09"
+  },
+  {
+    "id": "midh",
+    "title_en": "Horticulture Support (MIDH)",
+    "title_te": "ఉద్యాన పంటల మద్దతు (MIDH)",
+    "desc_en": "For fruits, vegetables, spices, flowers, coconut, bamboo: planting material, protected cultivation, nurseries, post-harvest units. Centre pays 60% (90% NE/Himalayan). Apply via district horticulture office / SHM, DBT to bank.",
+    "desc_te": "పండ్లు, కూరగాయలు, సుగంధ పంటలు, పూలు, కొబ్బరి, వెదురు కోసం: మొక్కలు, షెడ్‌నెట్/పాలీహౌస్, నర్సరీలు, నిల్వ/ప్యాక్‌హౌస్. కేంద్రం 60% (NE 90%). జిల్లా ఉద్యాన శాఖ ద్వారా దరఖాస్తు, DBT.",
+    "link": "https://www.midh.gov.in",
+    "phone": "",
+    "updatedOn": "2026-01-27"
+  },
+  {
+    "id": "enam",
+    "title_en": "Sell Online (eNAM Mandi)",
+    "title_te": "ఆన్‌లైన్‌లో అమ్మకం (eNAM మండి)",
+    "desc_en": "Free farmer registration on the national online mandi. Transparent auction across mandis, assaying for quality price, direct UPI/RTGS payment. Register on enam.gov.in or at your APMC gate. FPOs welcome.",
+    "desc_te": "జాతీయ ఆన్‌లైన్ మండిలో ఉచిత రైతు నమోదు. పారదర్శక వేలం, నాణ్యతకు తగిన ధర, నేరుగా UPI/RTGS చెల్లింపు. enam.gov.in లో లేదా మండి గేటు వద్ద నమోదు. FPOలకు స్వాగతం.",
+    "link": "https://enam.gov.in",
+    "phone": "18002700224",
+    "updatedOn": "2026-01-15"
+  },
+  {
+    "id": "pmmsy",
+    "title_en": "Fisheries Support (PMMSY)",
+    "title_te": "చేపల పెంపకం మద్దతు (PMMSY)",
+    "desc_en": "For fish farmers: ponds, hatcheries, cages, boats/nets, cold chain, insurance (Rs 5L accident). Govt pays 40% general, 60% women/SC/ST. Rs 20,750 cr outlay. Apply at district fisheries office / pmmsy.dof.gov.in.",
+    "desc_te": "చేపల రైతులకు: చెరువులు, హ్యాచరీలు, కేజ్‌లు, పడవలు/వలలు, కోల్డ్‌చైన్, బీమా (ప్రమాదానికి రూ.5 లక్షలు). ప్రభుత్వం సాధారణంగా 40%, మహిళలు/SC/STలకు 60%. జిల్లా మత్స్య శాఖలో దరఖాస్తు.",
+    "link": "https://pmmsy.dof.gov.in",
+    "phone": "18004251660",
+    "updatedOn": "2026-03-10"
+  },
+  {
+    "id": "nlm",
+    "title_en": "Livestock & Poultry Support (NLM)",
+    "title_te": "పశు/కోళ్ల పెంపకం మద్దతు (NLM)",
+    "desc_en": "50% capital subsidy to Rs 50L for poultry, sheep/goat, piggery breeding farms and fodder units (hay/silage/TMR). Individuals, SHGs, FPOs, JLGs eligible via SIDBI/bank. Apply on nlm.udyamimitra.in.",
+    "desc_te": "కోళ్లు, మేకలు/గొర్రెలు, పందుల పెంపకం, పశుగ్రాసం యూనిట్లకు 50% మూలధన రాయితీ (రూ.50 లక్షల వరకు). వ్యక్తులు, SHG, FPO, JLG అర్హులు. nlm.udyamimitra.in లో దరఖాస్తు.",
+    "link": "https://nlm.udyamimitra.in",
+    "phone": "",
+    "updatedOn": "2026-04-29"
+  },
+  {
+    "id": "pm-kmy",
+    "title_en": "Farmer Pension (PM-KMY, Rs 3,000/mo)",
+    "title_te": "రైతు పింఛను (నెలకు రూ.3,000)",
+    "desc_en": "Voluntary pension for small/marginal land-holding farmers age 18-40: pay Rs 55-200/mo till 60, get Rs 3,000/mo after 60 (govt matches). Enrol at CSC or pmkmy.gov.in. LIC manages fund.",
+    "desc_te": "18-40 ఏళ్ల చిన్న/సన్నకారు రైతులకు స్వచ్ఛంద పింఛను: 60 ఏళ్ల వరకు నెలకు రూ.55-200 చెల్లిస్తే, 60 తర్వాత నెలకు రూ.3,000 (ప్రభుత్వం సమాన వాటా). CSC లేదా pmkmy.gov.in లో నమోదు.",
+    "link": "https://maandhan.in",
+    "phone": "",
+    "updatedOn": "2024-09-09"
+  },
+  {
+    "id": "annadata-sukhibhava-ap",
+    "title_en": "Annadata Sukhibhava (AP state)",
+    "title_te": "అన్నదాత సుఖీభవ (ఏపీ)",
+    "desc_en": "AP state top-up: Rs 20,000/yr/family total (Rs 14,000 state + Rs 6,000 PM-KISAN) in 3 tranches. Tenant CCRC holders get full state share. Needs Webland + e-Crop + Aadhaar DBT. Village secretariat / annadathasukhibhava.ap.gov.in.",
+    "desc_te": "ఏపీ రాష్ట్ర అదనం: కుటుంబానికి ఏడాదికి రూ.20,000 (రాష్ట్రం రూ.14,000 + కిసాన్ రూ.6,000), 3 విడతల్లో. CCRC కౌలు రైతులకు పూర్తి వాటా. గ్రామ సచివాలయంలో నమోదు.",
+    "link": "https://agriculture.ap.gov.in",
+    "phone": "155251",
+    "updatedOn": "2026-08-01"
+  }
+]

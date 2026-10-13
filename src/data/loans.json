@@ -1,0 +1,62 @@
+[
+  {
+    "id": "kcc",
+    "title_en": "Kisan Credit Card (KCC)",
+    "title_te": "కిసాన్ క్రెడిట్ కార్డు",
+    "desc_en": "Crop loan limit raised to Rs 5L under MISS (2025-26). Short loans to Rs 3L at 7%, only 4% if repaid on time. Collateral-free to Rs 2L. ATM card, saturation camps. Apply at any bank with pattadar + Aadhaar; also on jansamarth.in (MH/MP/GJ live, AP via bank).",
+    "desc_te": "MISS కింద పంట రుణ పరిమితి రూ.5 లక్షలకు పెంపు. రూ.3 లక్షల వరకు 7% వడ్డీ, సకాలంలో కడితే 4%. రూ.2 లక్షల వరకు పూచీకత్తు లేదు. పట్టాదార్ + ఆధార్‌తో ఏ బ్యాంకులోనైనా; jansamarth.in లో కూడా.",
+    "link": "https://www.jansamarth.in",
+    "phone": "",
+    "updatedOn": "2026-03-11"
+  },
+  {
+    "id": "allied-kcc",
+    "title_en": "KCC for Dairy / Fishery",
+    "title_te": "పాడి/చేపల పెంపకానికి KCC",
+    "desc_en": "Working-capital KCC for dairy, poultry, fishery: limit raised Rs 2L to Rs 5L (2025-26), same 4% on timely repayment. 5L+ fishery cards issued. Apply at bank; fishery via jansamarth.in KCC-Fisheries.",
+    "desc_te": "పాడి, కోళ్లు, చేపల రైతులకు పెట్టుబడి KCC: పరిమితి రూ.2 లక్షల నుంచి రూ.5 లక్షలకు పెంపు, సకాలంలో కడితే 4% వడ్డీ. బ్యాంకులో దరఖాస్తు; చేపలకు jansamarth.in KCC-Fisheries.",
+    "link": "https://www.jansamarth.in",
+    "phone": "",
+    "updatedOn": "2026-03-11"
+  },
+  {
+    "id": "interest-subvention",
+    "title_en": "Interest Relief on Crop Loans (MISS)",
+    "title_te": "పంట రుణాలపై వడ్డీ రాయితీ",
+    "desc_en": "Short crop loans to Rs 3L at 7% via KCC; 3% extra off for on-time repayment = 4% effective. Auto-applied through bank/Kisan Rin Portal. 2025-26 disbursal Rs 18,367 cr.",
+    "desc_te": "KCC ద్వారా రూ.3 లక్షల వరకు 7% వడ్డీ; సకాలంలో కడితే అదనంగా 3% తగ్గింపు = 4%. బ్యాంకు ద్వారానే వర్తిస్తుంది.",
+    "link": "https://fasalrin.gov.in",
+    "phone": "",
+    "updatedOn": "2026-08-04"
+  },
+  {
+    "id": "agri-infra",
+    "title_en": "Agri Infrastructure Fund",
+    "title_te": "వ్యవసాయ మౌలిక నిధి",
+    "desc_en": "Loans for godowns, cold storage, processing, custom hiring: 3% interest relief to Rs 2 cr x 7 yrs + guarantee to Rs 2 cr. Rs 80,224 cr / 1.5L projects sanctioned. Apply via bank or jansamarth.in AIF; agriinfra.dac.gov.in for details.",
+    "desc_te": "గోదాములు, కోల్డ్ స్టోరేజ్, ప్రాసెసింగ్ కోసం రుణాలు: రూ.2 కోట్ల వరకు 3% వడ్డీ రాయితీ x 7 ఏళ్లు. బ్యాంకు లేదా jansamarth.in AIF ద్వారా దరఖాస్తు.",
+    "link": "https://agriinfra.dac.gov.in",
+    "phone": "",
+    "updatedOn": "2026-02-03"
+  },
+  {
+    "id": "acabc",
+    "title_en": "Agri Clinic / Agri Business (ACABC)",
+    "title_te": "వ్యవసాయ క్లినిక్ / వ్యాపారం",
+    "desc_en": "For agri graduates/diploma holders: free training + loan + back-ended subsidy for clinics, input shops, custom hiring, dairy/poultry units. NABARD channels subsidy. One Branch One Agri Clinic push. Apply on acabcmis.gov.in or jansamarth.in ACABC.",
+    "desc_te": "వ్యవసాయ పట్టభద్రులకు: ఉచిత శిక్షణ + రుణం + వెనుకబడిన రాయితీ — క్లినిక్‌లు, ఇన్‌పుట్ షాపులు, కస్టమ్ హైరింగ్, పాడి/కోళ్ల యూనిట్లు. NABARD ద్వారా రాయితీ. acabcmis.gov.in లో దరఖాస్తు.",
+    "link": "https://acabcmis.gov.in",
+    "phone": "",
+    "updatedOn": "2025-09-25"
+  },
+  {
+    "id": "ekun",
+    "title_en": "Pledge Loan on Stored Crop (eKUN)",
+    "title_te": "నిల్వ పంటపై రుణం (eKUN)",
+    "desc_en": "e-Kisan Upaj Nidhi: pledge your e-Negotiable Warehouse Receipt for a bank loan instead of distress selling. Digital e-KUN via NERL/CCRL on jansamarth.in. Ask your bank for warehouse-receipt finance.",
+    "desc_te": "పంటను అమ్మక తప్పనిసరిగా అమ్మకుండా, గోదాం రసీదు (e-NWR)పై బ్యాంకు రుణం. jansamarth.in eKUN ద్వారా డిజిటల్. బ్యాంకులో అడగండి.",
+    "link": "https://www.jansamarth.in",
+    "phone": "",
+    "updatedOn": "2026-06-01"
+  }
+]
